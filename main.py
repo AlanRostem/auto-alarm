@@ -9,16 +9,13 @@ if __name__ == "__main__":
     pygame.mixer.music.load("turbo_trooper_theme.wav")
 
     print("Controls:")
-    print("\t<esc>: Quit program")
+    print("\t<ctrl + c>: Quit program")
     print("\t<enter>: Dismiss alarm")
 
     is_working = True
     is_alarming = False
 
     while True:
-        if keyboard.is_pressed("esc"):
-            break
-
         if is_alarming:
             if keyboard.is_pressed("enter"):
                 pygame.mixer.music.stop()
